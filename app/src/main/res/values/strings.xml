@@ -1,5 +1,13 @@
 <resources>
-    <string name="app_name">Desafio Integrador Android Componentes</string>
+    <string name="app_name">Digital House Foods</string>
     <string name="foto_do_restaurante">Foto do restaurante</string>
     <string name="foto_do_prato">Foto do prato</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="ou">OR</string>
+    <string name="log_in_with_google">Log in with Google</string>
+    <string name="register">Register</string>
+    <string name="nome">Name</string>
+    <string name="password_confirmation">Repeat password</string>
 </resources>

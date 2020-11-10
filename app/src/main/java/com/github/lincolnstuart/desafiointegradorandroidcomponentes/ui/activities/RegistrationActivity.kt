@@ -2,6 +2,7 @@ package com.github.lincolnstuart.desafiointegradorandroidcomponentes.ui.activiti
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.github.lincolnstuart.desafiointegradorandroidcomponentes.R
 
 class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
