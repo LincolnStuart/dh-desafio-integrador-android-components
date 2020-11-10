@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Desafio Integrador Android Componentes</string>
+    <string name="foto_do_restaurante">Foto do restaurante</string>
+    <string name="foto_do_prato">Foto do prato</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margem_titulo_card">16dp</dimen>
+    <dimen name="tamanho_titulo">24sp</dimen>
+    <dimen name="arredondamento_card">8dp</dimen>
+    <dimen name="elevacao_card">8dp</dimen>
+    <dimen name="tamanho_imagem_restaurante">200dp</dimen>
+    <dimen name="margem_informacao_card">16dp</dimen>
+    <dimen name="tamanho_imagem_prato">150dp</dimen>
+</resources>
