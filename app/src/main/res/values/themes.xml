@@ -26,16 +26,17 @@
 
     <style name="SocialButton">
         <item name="android:background">@drawable/bg_social_button</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="GoogleButton" parent="SocialButton">
-        <item name="android:paddingStart">@dimen/margem_botao_com_icone</item>
-        <item name="android:paddingEnd">@dimen/margem_botao_com_icone</item>
+        <item name="android:paddingStart">@dimen/button_with_image_padding</item>
+        <item name="android:paddingEnd">@dimen/button_with_image_padding</item>
         <item name="android:drawableLeft">@drawable/ic_google_account</item>
     </style>
 
     <style name="separator">
-        <item name="android:layout_marginTop">@dimen/margem_divisor</item>
+        <item name="android:layout_marginTop">@dimen/separator_margin</item>
         <item name="android:background">@color/grey_200</item>
     </style>
 
@@ -44,13 +45,13 @@
         <item name="android:checkable">true</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
-        <item name="cardCornerRadius">@dimen/arredondamento_card</item>
-        <item name="cardElevation">@dimen/elevacao_card</item>
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
     </style>
 
     <style name="DefaultTitle">
-        <item name="android:layout_margin">@dimen/margem_titulo_card</item>
-        <item name="android:textSize">@dimen/tamanho_titulo</item>
+        <item name="android:layout_margin">@dimen/title_card_margin</item>
+        <item name="android:textSize">@dimen/title_size</item>
         <item name="android:textStyle">bold</item>
     </style>
 </resources>

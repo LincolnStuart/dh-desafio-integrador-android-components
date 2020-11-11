@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.github.lincolnstuart.desafiointegradorandroidcomponentes.R
 import com.github.lincolnstuart.desafiointegradorandroidcomponentes.models.Restaurant
 
@@ -17,7 +18,7 @@ class RestaurantAdapter(
         viewType: Int
     ): ViewHolder {
         val viewItem =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_prato, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_restaurant, parent, false)
         return ViewHolder(viewItem)
     }
 
@@ -31,10 +32,13 @@ class RestaurantAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private val name by lazy { itemView.findViewById<TextView>(R.id.tv_item_restaurant_name) }
-
-        fun bind(restaurant: Restaurant) {
-            name.text = restaurant.name
+        fun bind(restaurant: Restaurant) = with (itemView){
+            findViewById<TextView>(R.id.tv_item_restaurant_name).text = restaurant.name
+            findViewById<TextView>(R.id.tv_item_restaurant_address).text = restaurant.address
+            findViewById<TextView>(R.id.tv_item_restautant_closes_at).text = resources.getString(R.string.closes_at_pattern, restaurant.closesAt)
+            Glide.with(this)
+                .load(restaurant.urlPic)
+                .into(findViewById(R.id.iv_item_restaurant_pic))
         }
     }
 }

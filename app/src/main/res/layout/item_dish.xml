@@ -21,7 +21,7 @@
             <ImageView
                 android:id="@+id/iv_item_prato_foto"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/tamanho_imagem_prato"
+                android:layout_height="@dimen/dish_pic_size"
                 android:contentDescription="@string/dish_pic"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"

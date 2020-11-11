@@ -14,6 +14,7 @@ data class Restaurant(
     val name: String,
     val address: String,
     val closesAt: String,
+    val urlPic: String,
     val dishes: MutableList<Dish> = mutableListOf()
 ) : Parcelable {
 

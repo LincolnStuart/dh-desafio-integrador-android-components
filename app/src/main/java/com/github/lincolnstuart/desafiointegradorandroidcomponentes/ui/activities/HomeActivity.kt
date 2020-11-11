@@ -20,10 +20,10 @@ class HomeActivity : AppCompatActivity() {
 
     private fun initComponents() {
         val restaurants = listOf<Restaurant>(
-            Restaurant("Lincoln", "Stuart", "Lima"),
-            Restaurant("Lincoln", "Stuart", "Lima"),
-            Restaurant("Lincoln", "Stuart", "Lima"),
-            Restaurant("Lincoln", "Stuart", "Lima")
+            Restaurant("Cantina di Napoli", "Sunset Boulevard, 99, L.A", "23:00", "https://cdn.nohat.cc/thumb/f/720/6368616966520832.jpg"),
+            Restaurant("Enzo's", "Santa Monica Boulevard, 123, L.A", "02:15", "https://i.pinimg.com/736x/16/68/fd/1668fd0196b1be7cd85025a8a458d860.jpg"),
+            Restaurant("Art in Coffee", "Baker Street, 11, Candem", "21:30", "https://image.freepik.com/free-vector/modern-restaurant-interior-with-flat-design_23-2147920153.jpg"),
+            Restaurant("Senzai", "Henrietta Street, 40, D7", "03:00", "https://image.freepik.com/free-vector/elegant-restaurant-with-flat-design_23-2147792209.jpg")
         )
         rvRestaurants.apply {
             layoutManager = LinearLayoutManager(this@HomeActivity)

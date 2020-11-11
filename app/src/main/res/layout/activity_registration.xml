@@ -15,7 +15,7 @@
             android:id="@+id/til_registration_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margem_form_registration"
+            android:layout_margin="@dimen/registration_form_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -35,7 +35,7 @@
             app:layout_constraintTop_toBottomOf="@id/til_registration_name"
             app:layout_constraintStart_toStartOf="@id/til_registration_name"
             app:layout_constraintEnd_toEndOf="@id/til_registration_name"
-            android:layout_marginTop="@dimen/margem_form_registration">
+            android:layout_marginTop="@dimen/registration_form_margin">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -49,7 +49,7 @@
             android:id="@+id/til_registration_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margem_form_registration"
+            android:layout_marginTop="@dimen/registration_form_margin"
             app:layout_constraintStart_toStartOf="@id/til_registration_email"
             app:layout_constraintEnd_toEndOf="@id/til_registration_email"
             app:layout_constraintTop_toBottomOf="@id/til_registration_email">
@@ -66,7 +66,7 @@
             android:id="@+id/til_registration_password_confirmation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margem_form_registration"
+            android:layout_marginTop="@dimen/registration_form_margin"
             app:layout_constraintStart_toStartOf="@id/til_registration_password"
             app:layout_constraintEnd_toEndOf="@id/til_registration_password"
             app:layout_constraintTop_toBottomOf="@id/til_registration_password">
@@ -85,7 +85,7 @@
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:text="@string/register"
-    android:layout_marginBottom="@dimen/margem_form_registration"
+    android:layout_marginBottom="@dimen/registration_form_margin"
     app:layout_constraintStart_toStartOf="@id/til_registration_password_confirmation"
     app:layout_constraintEnd_toEndOf="@id/til_registration_password_confirmation"
     app:layout_constraintBottom_toBottomOf="parent"/>

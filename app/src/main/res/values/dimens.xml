@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margem_titulo_card">16dp</dimen>
-    <dimen name="tamanho_titulo">16sp</dimen>
-    <dimen name="arredondamento_card">8dp</dimen>
-    <dimen name="elevacao_card">8dp</dimen>
-    <dimen name="tamanho_imagem_restaurante">200dp</dimen>
-    <dimen name="margem_informacao_card">16dp</dimen>
-    <dimen name="tamanho_imagem_prato">150dp</dimen>
-    <dimen name="tamanho_animacao_splash">150dp</dimen>
-    <dimen name="margem_nome_app_splash">16dp</dimen>
-    <dimen name="margem_form_login">16dp</dimen>
-    <dimen name="arredondamento_botao">5dp</dimen>
-    <dimen name="margem_divisor">8dp</dimen>
-    <dimen name="margem_botao_com_icone">16dp</dimen>
-    <dimen name="margem_form_registration">16dp</dimen>
+    <dimen name="title_card_margin">16dp</dimen>
+    <dimen name="title_size">16sp</dimen>
+    <dimen name="card_radius">8dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="restaurant_pic_size">150dp</dimen>
+    <dimen name="card_information_margin">16dp</dimen>
+    <dimen name="card_information_vertical_margin">8dp</dimen>
+    <dimen name="dish_pic_size">100dp</dimen>
+    <dimen name="splash_anim_size">150dp</dimen>
+    <dimen name="app_name_splash_margin">16dp</dimen>
+    <dimen name="login_form_margin">16dp</dimen>
+    <dimen name="button_radius">5dp</dimen>
+    <dimen name="separator_margin">8dp</dimen>
+    <dimen name="button_with_image_padding">16dp</dimen>
+    <dimen name="registration_form_margin">16dp</dimen>
+    <dimen name="stroke_width_dark_mode">1dp</dimen>
 </resources>

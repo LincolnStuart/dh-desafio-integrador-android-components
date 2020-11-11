@@ -10,7 +10,7 @@
     <string name="register">Register</string>
     <string name="name">Name</string>
     <string name="password_confirmation">Repeat password</string>
-
+    <string name="closes_at_pattern">Closes at %1$s</string>
     <!-- Validation Messages -->
     <string name="invalid_email">E-mail invalid (pattern doesn\'t match)</string>
     <string name="invalid_password_minimum">Password invalid (min 3 characters)</string>
