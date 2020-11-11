@@ -22,7 +22,7 @@
                 android:id="@+id/iv_item_prato_foto"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/tamanho_imagem_prato"
-                android:contentDescription="@string/foto_do_prato"
+                android:contentDescription="@string/dish_pic"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

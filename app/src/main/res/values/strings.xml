@@ -1,13 +1,19 @@
 <resources>
     <string name="app_name">Digital House Foods</string>
-    <string name="foto_do_restaurante">Foto do restaurante</string>
-    <string name="foto_do_prato">Foto do prato</string>
+    <string name="restaurant_pic">Restaurant pic</string>
+    <string name="dish_pic">Dish pic</string>
     <string name="email">E-mail</string>
-    <string name="senha">Password</string>
+    <string name="password">Password</string>
     <string name="log_in">Log in</string>
-    <string name="ou">OR</string>
+    <string name="or">OR</string>
     <string name="log_in_with_google">Log in with Google</string>
     <string name="register">Register</string>
-    <string name="nome">Name</string>
+    <string name="name">Name</string>
     <string name="password_confirmation">Repeat password</string>
+
+    <!-- Validation Messages -->
+    <string name="invalid_email">E-mail invalid (pattern doesn\'t match)</string>
+    <string name="invalid_password_minimum">Password invalid (min 3 characters)</string>
+    <string name="invalid_password_confirmation">Password invalid (confirmation is different)</string>
+    <string name="invalid_name_minimum">Name invalid (min 3 characters)</string>
 </resources>

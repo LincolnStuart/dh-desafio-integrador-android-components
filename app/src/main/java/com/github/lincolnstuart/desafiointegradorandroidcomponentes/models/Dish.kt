@@ -10,22 +10,22 @@ import kotlinx.android.parcel.Parcelize
  * @since 09/11/2020
  */
 @Parcelize
-data class Prato(
-    private val nome: String,
-    private val descricao: String
+data class Dish(
+    private val name: String,
+    private val description: String
 ) : Parcelable {
 
     override fun toString(): String {
-        return "{ nome : $nome , descricao : $descricao }"
+        return "{ name : $name , description : $description }"
     }
 
     override fun hashCode(): Int {
-        return "$nome - $descricao".hashCode()
+        return "$name - $description".hashCode()
     }
 
     override fun equals(other: Any?): Boolean {
-        return (other as? Prato)?.let {
-            nome == it.nome && descricao == it.descricao
+        return (other as? Dish)?.let {
+            name == it.name && description == it.description
         } ?: false
     }
 
