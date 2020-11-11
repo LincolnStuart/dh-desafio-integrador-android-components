@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_item_dish_card"
         style="@style/DefaultCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -19,7 +20,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/iv_item_prato_foto"
+                android:id="@+id/iv_item_dish_pic"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dish_pic_size"
                 android:contentDescription="@string/dish_pic"
@@ -30,13 +31,14 @@
                 tools:src="@drawable/ic_launcher_background" />
 
             <TextView
+                android:id="@+id/tv_item_dish_name"
                 style="@style/DefaultTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="Prato B"
-                app:layout_constraintTop_toBottomOf="@id/iv_item_prato_foto"
-                app:layout_constraintStart_toStartOf="@id/iv_item_prato_foto"
-                app:layout_constraintEnd_toEndOf="@id/iv_item_prato_foto"
+                app:layout_constraintTop_toBottomOf="@id/iv_item_dish_pic"
+                app:layout_constraintStart_toStartOf="@id/iv_item_dish_pic"
+                app:layout_constraintEnd_toEndOf="@id/iv_item_dish_pic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 />

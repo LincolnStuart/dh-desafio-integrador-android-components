@@ -10,6 +10,7 @@ buildscript {
             "junitext"        : "1.1.2",
             "espresso"        : "3.3.0",
             "lottie"          : "3.5.0",
+            "glide"           : "4.11.0",
     ]
     repositories {
         google()

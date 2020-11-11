@@ -54,4 +54,12 @@
         <item name="android:textSize">@dimen/title_size</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+
+    <style name="TitleImage" parent="DefaultTitle">
+        <item name="android:background">@drawable/bg_image_text</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/image_title_size</item>
+    </style>
 </resources>

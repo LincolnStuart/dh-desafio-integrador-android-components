@@ -15,7 +15,7 @@ data class Restaurant(
     val address: String,
     val closesAt: String,
     val urlPic: String,
-    val dishes: MutableList<Dish> = mutableListOf()
+    val dishes: List<Dish> = mutableListOf()
 ) : Parcelable {
 
     override fun toString(): String {

@@ -11,8 +11,9 @@ import kotlinx.android.parcel.Parcelize
  */
 @Parcelize
 data class Dish(
-    private val name: String,
-    private val description: String
+    val name: String,
+    val description: String,
+    val urlPic: String,
 ) : Parcelable {
 
     override fun toString(): String {

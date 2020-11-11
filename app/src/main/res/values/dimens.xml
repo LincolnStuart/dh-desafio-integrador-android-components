@@ -2,8 +2,10 @@
 <resources>
     <dimen name="title_card_margin">16dp</dimen>
     <dimen name="title_size">16sp</dimen>
+    <dimen name="image_title_size">20sp</dimen>
     <dimen name="card_radius">8dp</dimen>
     <dimen name="card_elevation">8dp</dimen>
+    <dimen name="header_pic_size">225dp</dimen>
     <dimen name="restaurant_pic_size">150dp</dimen>
     <dimen name="card_information_margin">16dp</dimen>
     <dimen name="card_information_vertical_margin">8dp</dimen>
@@ -16,4 +18,5 @@
     <dimen name="button_with_image_padding">16dp</dimen>
     <dimen name="registration_form_margin">16dp</dimen>
     <dimen name="stroke_width_dark_mode">1dp</dimen>
+    <dimen name="margin_dish_description">16dp</dimen>
 </resources>
