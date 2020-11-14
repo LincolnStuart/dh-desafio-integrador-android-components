@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
+import androidx.lifecycle.ViewModelProvider
 import com.github.lincolnstuart.desafiointegradorandroidcomponentes.R
 import com.github.lincolnstuart.desafiointegradorandroidcomponentes.extensions.validateField
+import com.github.lincolnstuart.desafiointegradorandroidcomponentes.viewmodels.RegistrationViewModel
 import com.google.android.material.textfield.TextInputLayout
 
 class RegistrationActivity : AppCompatActivity() {
 
+    private lateinit var viewModel: RegistrationViewModel
     private val tilName by lazy { findViewById<TextInputLayout>(R.id.til_registration_name) }
     private val tilEmail by lazy { findViewById<TextInputLayout>(R.id.til_registration_email) }
     private val tilPassword by lazy { findViewById<TextInputLayout>(R.id.til_registration_password) }
@@ -24,6 +27,7 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
     private fun initComponents() {
+        viewModel = ViewModelProvider(this).get(RegistrationViewModel::class.java)
         btSubmit.setOnClickListener {
             if (validateForm())
                 startActivity(Intent(this@RegistrationActivity, HomeActivity::class.java))
@@ -42,25 +46,25 @@ class RegistrationActivity : AppCompatActivity() {
 
     private fun validateName(til: TextInputLayout): Boolean {
         return til.validateField(getString(R.string.invalid_name_minimum)) {
-            it.count() < 3
+            viewModel.business.validateName(it)
         }
     }
 
     private fun validateEmail(til: TextInputLayout): Boolean {
         return til.validateField(getString(R.string.invalid_email)) {
-            !Patterns.EMAIL_ADDRESS.matcher(it).matches()
+            viewModel.business.validateEmail(it)
         }
     }
 
     private fun validatePassword(til: TextInputLayout): Boolean {
         return til.validateField(getString(R.string.invalid_password_minimum)) {
-            it.count() < 3
+            viewModel.business.validatePassword(it)
         }
     }
 
     private fun validatePasswordConfirmation(til: TextInputLayout, password: String): Boolean {
         return til.validateField(getString(R.string.invalid_password_confirmation)) {
-            it != password
+            viewModel.business.validateConfirmationPassword(password, it)
         }
     }
 

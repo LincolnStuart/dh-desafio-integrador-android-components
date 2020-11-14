@@ -1,16 +1,18 @@
 package com.github.lincolnstuart.desafiointegradorandroidcomponentes.ui.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Patterns
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.github.lincolnstuart.desafiointegradorandroidcomponentes.R
 import com.github.lincolnstuart.desafiointegradorandroidcomponentes.extensions.validateField
+import com.github.lincolnstuart.desafiointegradorandroidcomponentes.viewmodels.LoginViewModel
 import com.google.android.material.textfield.TextInputLayout
 
 class LoginActivity : AppCompatActivity() {
 
+    private lateinit var viewModel: LoginViewModel
     private val tilEmail by lazy { findViewById<TextInputLayout>(R.id.til_login_email) }
     private val tilPassword by lazy { findViewById<TextInputLayout>(R.id.til_login_password) }
     private val btLoginEmail by lazy { findViewById<Button>(R.id.bt_login_email) }
@@ -24,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun initComponents() {
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         val homeIntent = Intent(this, HomeActivity::class.java)
         val registrationIntent = Intent(this, RegistrationActivity::class.java)
         btLoginEmail.setOnClickListener {
@@ -45,13 +48,13 @@ class LoginActivity : AppCompatActivity() {
 
     private fun validatePassword(til: TextInputLayout): Boolean {
         return til.validateField(getString(R.string.invalid_password_minimum)) {
-            it.count() < 3
+            viewModel.business.validatePassword(it)
         }
     }
 
     private fun validateEmail(til: TextInputLayout): Boolean {
         return til.validateField(getString(R.string.invalid_email)) {
-            !Patterns.EMAIL_ADDRESS.matcher(it).matches()
+            viewModel.business.validateEmail(it)
         }
     }
 

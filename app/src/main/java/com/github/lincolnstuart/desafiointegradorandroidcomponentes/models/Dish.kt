@@ -11,10 +11,16 @@ import kotlinx.android.parcel.Parcelize
  */
 @Parcelize
 data class Dish(
+    val id: Int,
     val name: String,
     val description: String,
     val urlPic: String,
 ) : Parcelable {
+
+    companion object{
+        private var availableId = 1
+        fun getValidId() = availableId++
+    }
 
     override fun toString(): String {
         return "{ name : $name , description : $description }"

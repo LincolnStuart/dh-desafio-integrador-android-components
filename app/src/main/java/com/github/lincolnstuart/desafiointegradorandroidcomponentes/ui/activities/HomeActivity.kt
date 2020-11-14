@@ -2,16 +2,18 @@ package com.github.lincolnstuart.desafiointegradorandroidcomponentes.ui.activiti
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.lincolnstuart.desafiointegradorandroidcomponentes.R
-import com.github.lincolnstuart.desafiointegradorandroidcomponentes.data.RestaurantMock
+import com.github.lincolnstuart.desafiointegradorandroidcomponentes.models.Restaurant
 import com.github.lincolnstuart.desafiointegradorandroidcomponentes.ui.adapters.RestaurantAdapter
+import com.github.lincolnstuart.desafiointegradorandroidcomponentes.viewmodels.HomeViewModel
 
 class HomeActivity : AppCompatActivity() {
 
+    private lateinit var viewModel: HomeViewModel
     private val rvRestaurants by lazy { findViewById<RecyclerView>(R.id.rv_home_restaurants) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,9 +23,22 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun initComponents() {
+        initViewModel()
+        setupObservables()
+    }
+
+    private fun setupObservables() {
+        viewModel.restaurantsLiveData.observe(this) {
+            it?.let { restaurants ->
+                initRecyvlerViewRestaurants(restaurants)
+            }
+        }
+    }
+
+    private fun initRecyvlerViewRestaurants(it: List<Restaurant>) {
         rvRestaurants.apply {
             layoutManager = LinearLayoutManager(this@HomeActivity)
-            adapter = RestaurantAdapter(RestaurantMock.restaurants) {
+            adapter = RestaurantAdapter(it) {
                 val intent = Intent(this@HomeActivity, RestaurantActivity::class.java)
                 intent.putExtra(RESTAURANT_KEY, it)
                 startActivity(intent)
@@ -31,7 +46,12 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    companion object{
+    private fun initViewModel() {
+        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        viewModel.getRestaurants()
+    }
+
+    companion object {
         val RESTAURANT_KEY = "param-restaurant"
     }
 }

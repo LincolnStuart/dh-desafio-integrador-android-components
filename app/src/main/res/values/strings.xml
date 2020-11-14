@@ -13,9 +13,9 @@
     <string name="closes_at_pattern">Closes at %1$s</string>
     <!-- Validation Messages -->
     <string name="invalid_email">E-mail invalid (pattern doesn\'t match)</string>
-    <string name="invalid_password_minimum">Password invalid (min 3 characters)</string>
+    <string name="invalid_password_minimum">Password invalid (value is too short)</string>
     <string name="invalid_password_confirmation">Password invalid (confirmation is different)</string>
-    <string name="invalid_name_minimum">Name invalid (min 3 characters)</string>
+    <string name="invalid_name_minimum">Name invalid (value is too short)</string>
     <string name="dishes">Dishes</string>
     <string name="back_button">Back Button</string>
 </resources>

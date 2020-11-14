@@ -11,12 +11,18 @@ import kotlinx.android.parcel.Parcelize
  */
 @Parcelize
 data class Restaurant(
+    val id: Int,
     val name: String,
     val address: String,
     val closesAt: String,
     val urlPic: String,
     val dishes: List<Dish> = mutableListOf()
 ) : Parcelable {
+
+    companion object{
+        private var availableId = 1
+        fun getValidId() = availableId++
+    }
 
     override fun toString(): String {
         return "{ name : $name ," +
