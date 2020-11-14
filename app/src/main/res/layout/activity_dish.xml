@@ -17,6 +17,15 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_launcher_background" />
 
+    <ImageButton
+        android:id="@+id/ib_dish_back_button"
+        style="@style/BackButton"
+        android:contentDescription="@string/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_dish_name"
         style="@style/TitleImage"
@@ -32,7 +41,7 @@
         android:id="@+id/tv_dish_desc"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/margin_dish_description"
+        android:layout_margin="@dimen/dish_description_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

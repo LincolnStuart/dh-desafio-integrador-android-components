@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
@@ -20,10 +21,12 @@ class RestaurantActivity : AppCompatActivity() {
     private val ivRestaurantPic by lazy { findViewById<ImageView>(R.id.iv_restaurant_pic) }
     private val tvRestaurantName by lazy { findViewById<TextView>(R.id.tv_restaurant_name) }
     private val rvRestaurantDishes by lazy { findViewById<RecyclerView>(R.id.rv_restaurant_dishes) }
+    private val ibRestaurantBackButton by lazy {findViewById<ImageButton>(R.id.ib_restaurant_back_button)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant)
+        supportActionBar?.hide()
         initComponents()
     }
 
@@ -34,6 +37,9 @@ class RestaurantActivity : AppCompatActivity() {
                 .load(it.urlPic)
                 .into(ivRestaurantPic)
             tvRestaurantName.text = it.name
+            ibRestaurantBackButton.setOnClickListener{
+                finish()
+            }
             rvRestaurantDishes.apply {
                 layoutManager = GridLayoutManager(this@RestaurantActivity, 2)
                 adapter = DishesAdapter(it.dishes){dish ->

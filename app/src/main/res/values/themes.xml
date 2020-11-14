@@ -35,7 +35,7 @@
         <item name="android:drawableLeft">@drawable/ic_google_account</item>
     </style>
 
-    <style name="separator">
+    <style name="Separator">
         <item name="android:layout_marginTop">@dimen/separator_margin</item>
         <item name="android:background">@color/grey_200</item>
     </style>
@@ -55,6 +55,11 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="MainTitle">
+        <item name="android:layout_margin">@dimen/title_card_margin</item>
+        <item name="android:textSize">@dimen/main_title_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <style name="TitleImage" parent="DefaultTitle">
         <item name="android:background">@drawable/bg_image_text</item>
@@ -62,4 +67,13 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/image_title_size</item>
     </style>
+
+    <style name="BackButton">
+        <item name="srcCompat">@drawable/ic_back_button</item>
+        <item name="android:layout_margin">@dimen/back_button_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
 </resources>

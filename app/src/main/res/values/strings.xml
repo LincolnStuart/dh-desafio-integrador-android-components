@@ -16,4 +16,6 @@
     <string name="invalid_password_minimum">Password invalid (min 3 characters)</string>
     <string name="invalid_password_confirmation">Password invalid (confirmation is different)</string>
     <string name="invalid_name_minimum">Name invalid (min 3 characters)</string>
+    <string name="dishes">Dishes</string>
+    <string name="back_button">Back Button</string>
 </resources>

@@ -17,6 +17,15 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_launcher_background" />
 
+    <ImageButton
+        android:id="@+id/ib_restaurant_back_button"
+        style="@style/BackButton"
+        android:contentDescription="@string/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_restaurant_name"
         style="@style/TitleImage"
@@ -28,6 +37,19 @@
         app:layout_constraintStart_toStartOf="@id/iv_restaurant_pic"
         tools:text="Restaurant A" />
 
+    <TextView
+        android:id="@+id/tv_restaurant_dishes"
+        style="@style/MainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dishes"
+        app:layout_constraintTop_toBottomOf="@id/iv_restaurant_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rv_restaurant_dishes"
+        app:layout_constraintHorizontal_bias="0.0"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_restaurant_dishes"
         android:layout_width="0dp"
@@ -35,7 +57,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_restaurant_pic"
+        app:layout_constraintTop_toBottomOf="@id/tv_restaurant_dishes"
         tools:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         tools:listitem="@layout/item_dish"
         tools:spanCount="2" />

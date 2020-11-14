@@ -10,10 +10,10 @@
         style="@style/DefaultCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -33,15 +33,16 @@
             <TextView
                 android:id="@+id/tv_item_dish_name"
                 style="@style/DefaultTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                tools:text="Prato B"
-                app:layout_constraintTop_toBottomOf="@id/iv_item_dish_pic"
-                app:layout_constraintStart_toStartOf="@id/iv_item_dish_pic"
-                app:layout_constraintEnd_toEndOf="@id/iv_item_dish_pic"
+                android:ellipsize="end"
+                android:singleLine="true"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/iv_item_dish_pic"
                 app:layout_constraintHorizontal_bias="0.0"
-                />
+                app:layout_constraintStart_toStartOf="@id/iv_item_dish_pic"
+                app:layout_constraintTop_toBottomOf="@id/iv_item_dish_pic"
+                tools:text="Prato B" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

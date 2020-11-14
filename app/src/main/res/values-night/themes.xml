@@ -29,7 +29,7 @@
         <item name="android:textColor">@color/grey_200</item>
     </style>
 
-    <style name="separator">
+    <style name="Separator">
         <item name="android:layout_marginTop">@dimen/separator_margin</item>
         <item name="android:background">@color/grey_100</item>
     </style>
